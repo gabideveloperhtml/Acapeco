@@ -1,0 +1,102 @@
+/* .rubik-scribble-regular {
+  font-family: "  ;
+  font-weight: 400;
+  font-style: normal;
+} */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  color: var(--primary-color);
+  line-height: 1.5;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+h1 {
+  font-size: 6rem;
+  text-transform: uppercase;
+}
+h2 {
+  /* parte 4 */
+  font-size: 6rem;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+h3 {
+  font-size: 5rem;
+}
+h4 {
+  font-size: 4.5rem;
+}
+h5 {
+  font-size: 4rem;
+}
+h6 {
+  font-size: 3.5rem;
+}
+
+/* parte 2 */
+a {
+  /* tirar as linhas dos links... */
+  text-decoration: none;
+  color: #00bcd4;
+}
+
+/* parte 4 */
+p{
+  margin-bottom: 3rem;
+}
+
+.responsive-table {
+  background-image: none;
+}
+
+table {
+  min-width: 400px;
+  /* largura mínima da tabela aumentada */
+  width: 80%;
+  /* agora a tabela ocupa 80% do espaço disponível */
+  border-collapse: collapse;
+  /* as bordas das células serão colapsadas, como no original */
+}
+
+table caption {
+  font-style: italic;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #00bcd4;
+  /* cor azul escura para o título */
+}
+
+table td, table th {
+  white-space: nowrap;
+  /* impede que o conteúdo dentro das células da tabela quebre em várias linhas */
+  padding: 1.5rem;
+  /* espaçamento interno aumentado */
+  text-align: center;
+  /* texto centralizado */
+  border: 0.2rem solid #00bcd4;
+  /* borda sólida azul escura */
+  background-color: #f8f840;
+  /* fundo amarelo para as células */
+  color: #00bcd4;
+  /* texto azul escuro */
+}
+
+tfoot td, table th {
+  background-color: #00bcd4;
+  /* fundo azul escuro aplicado aos cabeçalhos e rodapés */
+  color: #f8f840;
+  /* cor do texto amarela */
+}

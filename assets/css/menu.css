@@ -1,0 +1,76 @@
+/* parte 2 */
+.menu {
+  /* background: var(--white-color); */
+  position: fixed;
+  /* vai rolar junto com a pagina deixa de ser um block é como se ele nao esta ali... se colocar outra coisa vai ficar embaixo dele... */
+  top: 0;
+  /*sem pre ficar no topo 0 caso add algo novo pra nao baixar nem mexer....*/
+  right: 0;
+  left: 0;
+  width: 100%;
+  /* width apenas para garantir o tamho  */
+  border-bottom: 0.1rem solid var(--light-gray-color);
+  /* borda do menu */
+  /* parte 3 nao subir em cima do menu com o z-index */
+  /* empilhamento de elementos em um plano tridimensional, com z-index determina a ordem em que eles são empilhados, 
+  onde um valor maior de z-index coloca o elemento mais para o topo da pilha. */
+  z-index: 1;
+}
+.menu-content {
+  display: flex;
+  /* Organização flexível dos elementos: Com o display: flex, você pode alinhar os elementos
+   filhos horizontalmente ou verticalmente, distribuí-los uniformemente ao longo do contêiner */
+  justify-content: space-between;
+  /* separando da logo */
+  align-items: center;
+  /* para que o itens se alinha no centro */
+  padding-top: 0;
+  padding-bottom: 0;
+  /* assim deixamos o a poder definir o tamanho que queremos em .menu ul li a */
+}
+
+/* ajustar pra ficar melhor */
+.menu ul {  /* pra nao ter as bolinhas... */
+  list-style: none;
+  display: flex;  /* assim ja ajustamos a ul pra ficar em H */
+}
+.menu ul li a {  /*ajustar apartir do a pra block porque por padrao ele é inline dai nao empura o conteira pra baixo */
+  display: block;  /* height: 50px; como exemplo dai ele muda a nossa vontade */
+  padding: 2rem;
+  font-size: 1.8rem;
+  position: relative;
+}
+/* extra efeito visual no menu */
+/* CSS: ::before e ::after. Eles permitem adicionar conteúdo ou estilizar partes específicas de um elemento sem precisar alterar o HTML.  */
+/*  pseudo-elementos ::after que são filhos dos elementos a dentro de elementos li, que por sua vez estão dentro de uma lista não ordenada (ul) que está dentro de um elemento com a classe menu. */
+.menu ul li a::after {
+  content: '';  /*  Define o conteúdo do pseudo-elemento como vazio. como ta vazio so é usado pra decorar */
+  position: absolute;
+  /*  Define a posição do pseudo-elemento como absoluta, o que significa que ele será posicionado em relação ao seu ancestra o pai*/
+  bottom: 1rem;  /*  Define a distância do pseudo-elemento ao seu ancestral posicionado mais próximo (no caso, o elemento a pai) */
+  left: 50%; /* Define a posição horizontal do pseudo-elemento como exatamente no meio do seu ancestral posicionado mais próximo */
+  width: 0%;  /* Define a largura inicial do pseudo-elemento como 0%. */
+  height: 0.2rem;  /* Define a altura do pseudo-elemento como 0.2 unidades rem. */
+  background: var(--secondary-color);  /* Define a cor de fundo do pseudo-elemento */
+  transition: all 300ms ease-in-out;
+  /* Define uma transição suave de 300 milissegundos para todas as propriedades CSS, 
+  utilizando uma função de temporização de aceleração e desaceleração. */
+}
+
+.menu ul li a:hover::after {
+  width: 50%;
+  /* Quando o link está em estado de hover, esta regra altera a largura do pseudo-elemento para 50%. */
+  left: 25%;
+  /* Quando o link está em estado de hover, esta regra altera a posição horizontal do pseudo-elemento para 25%,
+  movendo-o para mais perto da esquerda. */
+
+}
+
+.menu h1 {
+  font-size: 2.3rem;
+  color: var(--primary-color);
+}
+
+.menu h1 a {
+  color: inherit;
+}
